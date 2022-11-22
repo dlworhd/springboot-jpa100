@@ -1,0 +1,32 @@
+Spring:
+  datasource:
+    url: jdbc:mariadb://localhost:3306/ex
+    driver-class-name: org.mariadb.jdbc.Driver
+    username: j
+    password: dlwodud821
+
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+      generate-ddl: true
+    properties:
+      hibernate:
+        format_sql: true
+        hibernate:
+          show-sql:true
+
+
+  mvc:
+    hiddenmethod:
+      filter:
+        enabled: true
+
+  mustache:
+    suffix: .html
+
+logging:
+  level:
+    org.hibernate.SQL: trace
+    org.hibernate.type: trace
+
