@@ -1,5 +1,6 @@
 package com.utfda.springbootjpa100.notice.entity;
 
+import com.utfda.springbootjpa100.user.entity.User;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -21,6 +22,10 @@ public class Notice {
 
     @Column
     private String title;
+
+    @ManyToOne
+    @JoinColumn
+    private User user;
 
     @Column
     private String contents;

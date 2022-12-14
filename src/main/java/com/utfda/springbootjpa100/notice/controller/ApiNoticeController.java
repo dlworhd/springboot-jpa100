@@ -193,7 +193,6 @@ public class ApiNoticeController {
 //        noticeRepository.save(notice);
 //
 //        //게시글이 있을 때
-
 //    }
 
 //
@@ -217,6 +216,7 @@ public class ApiNoticeController {
         notice.setHits(notice.getHits() + 1);
         noticeRepository.save(notice);
     }
+
 //
 //    @DeleteMapping("/api/notice/{id}")
 //    public void deleteNotice(@PathVariable Long id){

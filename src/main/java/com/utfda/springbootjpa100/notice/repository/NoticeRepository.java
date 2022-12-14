@@ -1,6 +1,7 @@
 package com.utfda.springbootjpa100.notice.repository;
 
 import com.utfda.springbootjpa100.notice.entity.Notice;
+import com.utfda.springbootjpa100.user.entity.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
@@ -17,8 +18,10 @@ public interface NoticeRepository extends JpaRepository<Notice, Long> {
     //제목 동일, 내용 동일, 등록시간이 체크시간보다 크다.
     Optional<List<Notice>> findByTitleAndContentsAndRegDateIsGreaterThanEqual(String title, String contents, LocalDateTime regDate);
 
+    List<Notice> findByUser(User user);
     //타이틀, 컨텐츠, 같거나 더 큰 Date를 찾는다.
     int countByTitleAndContentsAndRegDateIsGreaterThanEqual(String title, String contents, LocalDateTime regDate);
+
 }
 
 /*
